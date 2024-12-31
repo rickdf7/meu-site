@@ -192,21 +192,26 @@ header nav ul li {
     /* Ajusta a largura da imagem ao container */
     height: 100%;
     /* Ajusta a altura da imagem ao container */
-    object-fit: cover;
-    /* Garante que a imagem preencha sem distorção */
 }
 
 .texto {
     position: absolute;
     /* Permite posicionar o texto sobre a imagem */
-    top: 15%;
+    top: 0;
+    /* Começa do topo */
+    left: 0;
+    /* Alinha ao lado esquerdo */
     width: 100%;
     /* Faz o bloco de texto ocupar toda a largura */
     height: 100%;
     /* Faz o bloco de texto ocupar toda a altura */
     display: flex;
     /* Usa flexbox para alinhar os textos */
-    align-items: self-start;
+    flex-direction: column;
+    /* Textos organizados em coluna */
+    justify-content: center;
+    /* Centraliza os textos verticalmente */
+    align-items: center;
     /* Centraliza os textos horizontalmente */
     color: white;
     /* Cor do texto */
