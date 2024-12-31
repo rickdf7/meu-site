@@ -69,7 +69,7 @@ header nav ul li {
     width: 90%;
     outline: 0;
     cursor: pointer;
-    
+
 }
 
 /* redes socias */
@@ -178,30 +178,42 @@ header nav ul li {
 }
 
 /* imagem de fundo */
-.topo-do-site {
-    background-image: url('/Users/henriqueaguiar/Documents/projetoSitePessoal 2/image/chip-7732459_1920 copy.png');
-    /* Substitua pelo caminho da sua imagem */
-    background-size: cover;
-    /* Faz a imagem ocupar toda a seção */
-    background-position: center;
-    /* Centraliza a imagem */
-    background-repeat: no-repeat;
-    /* Evita repetição da imagem */
-    height: 100vh;
-    /* Altura da seção: 100% da altura da tela */
-    display: flex;
-    /* Centraliza o conteúdo verticalmente */
-    justify-content: baseline;
-    /* Centraliza horizontalmente */
-    align-items: normal;
-    /* Centraliza verticalmente */
+.topo {
+    position: relative;
+    /* Define o contexto de posicionamento */
+    width: 100%;
+    /* Faz a imagem ocupar toda a largura do container */
+    height: 100%;
+    /* Faz a imagem ocupar toda a altura */
 }
 
-/* organização do texto */
+.imag-1section {
+    width: 100%;
+    /* Ajusta a largura da imagem ao container */
+    height: 100%;
+    /* Ajusta a altura da imagem ao container */
+    object-fit: cover;
+    /* Garante que a imagem preencha sem distorção */
+}
+
 .texto {
-    margin-top: 7%;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    /* Sombra */
+    position: absolute;
+    /* Permite posicionar o texto sobre a imagem */
+    top: 15%;
+    width: 100%;
+    /* Faz o bloco de texto ocupar toda a largura */
+    height: 100%;
+    /* Faz o bloco de texto ocupar toda a altura */
+    display: flex;
+    /* Usa flexbox para alinhar os textos */
+    align-items: self-start;
+    /* Centraliza os textos horizontalmente */
+    color: white;
+    /* Cor do texto */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    /* Adiciona sombra ao texto */
+    z-index: 2;
+    /* Garante que o texto fique acima da imagem */
 }
 
 #idea,
@@ -384,7 +396,7 @@ header nav ul li {
 
 /* formulario */
 
-.field{
+.field {
     width: 70%;
     margin: 10px 45px;
 }
@@ -398,7 +410,7 @@ header nav ul li {
 
 input[type=text],
 input[type=email],
-textarea{
+textarea {
     width: 100%;
     padding-left: 15px;
     height: 30px;
@@ -406,16 +418,19 @@ textarea{
     border: 1px solid #08036c;
     outline: none;
 }
-input#nao{
+
+input#nao {
     margin-left: 30px;
 }
-textarea{
+
+textarea {
     line-height: 20px;
     padding: 10px;
     height: 90px;
     resize: none;
 }
-input[type=submit]{
+
+input[type=submit] {
     display: block;
     background-color: #ffffff;
     height: 35px;
@@ -441,7 +456,7 @@ input[type=submit]{
     /* Fundo transparente */
 }
 
-.container-contato{
+.container-contato {
     position: relative;
     top: 10%;
     margin-left: 50%;
@@ -452,11 +467,11 @@ input[type=submit]{
 
 }
 
-.container-contato{
+.container-contato {
     color: #000433;
 }
 
-.container-contato img{
+.container-contato img {
     width: 7%;
     height: auto;
     margin-top: 4%;
@@ -464,20 +479,20 @@ input[type=submit]{
     position: absolute;
 }
 
-.container-contato a{
-    
+.container-contato a {
+
     text-decoration: none;
 }
 
-.container-contato h3{
+.container-contato h3 {
     color: #000433;
     margin-left: 20%;
     margin-top: 3%;
     display: inline-block;
 }
 
-.tel-and-img, .email-and-img, .endereco-and-img {
+.tel-and-img,
+.email-and-img,
+.endereco-and-img {
     display: flex;
 }
-
-
