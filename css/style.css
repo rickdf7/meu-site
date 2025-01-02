@@ -7,8 +7,6 @@
 
 body {
     overflow: auto;
-    background-color: #000433;
-    height: 100vh;
 }
 
 section {
@@ -39,9 +37,6 @@ header>.interface {
     position: fixed;
     z-index: 1000;
     border-bottom: 5px solid rgba(0, 0, 0, 0.2);
-    /* Borda inferior com cor e sombra */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    /* Sombra suave abaixo da borda */
 }
 
 header nav ul {
@@ -178,6 +173,11 @@ header nav ul li {
 }
 
 /* imagem de fundo */
+.topo-do-site{
+    background-image: url('../image/chip-7732459_1920 copy.png');
+    background-size: cover;
+}
+
 .topo {
     position: relative;
     /* Define o contexto de posicionamento */
@@ -187,12 +187,6 @@ header nav ul li {
     /* Faz a imagem ocupar toda a altura */
 }
 
-.imag-1section {
-    width: 100%;
-    /* Ajusta a largura da imagem ao container */
-    height: 100%;
-    /* Ajusta a altura da imagem ao container */
-}
 
 .texto {
     position: absolute;
@@ -364,6 +358,8 @@ header nav ul li {
     display: flex;
     top: 10%;
     width: 50%;
+    outline: 0;
+    cursor: pointer;
 }
 
 .text-overlay {
@@ -452,8 +448,9 @@ input[type=submit] {
 
 /* formulario caixa branca */
 .container-form {
+    display: grid;
     position: relative;
-    top: 25%;
+    top: 20%;
     margin-left: 35%;
     width: 25%;
     height: 60%;
@@ -463,17 +460,13 @@ input[type=submit] {
 
 .container-contato {
     position: relative;
-    top: 10%;
+    top: 30%;
     margin-left: 50%;
     width: 90%;
-    height: 25%;
+    height: 110%;
     background-color: rgb(253, 253, 253);
     box-shadow: -8px -8px 0px rgba(7, 7, 7, 0.401);
 
-}
-
-.container-contato {
-    color: #000433;
 }
 
 .container-contato img {
@@ -500,4 +493,121 @@ input[type=submit] {
 .email-and-img,
 .endereco-and-img {
     display: flex;
+}
+
+/* footer */
+
+.site-footer {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px 10px;
+    text-align: left;
+    font-size: 8px;
+    border-top: 5px solid rgba(0, 0, 0, 0.2);
+}
+
+/* responsivel */
+@media screen and (max-width: 480px) {
+    /* Section topo */
+    .topo-do-site{
+        background-image: url('../image/lampada.png');
+        background-size: 80%;
+        background-repeat: no-repeat; /* Impede a repetição da imagem */
+        background-position: top center;
+        height: 90vh; /* Define uma altura proporcional à tela */
+        
+    }
+
+    .texto {
+    justify-content: space-between;
+    /* Centraliza os textos verticalmente */
+    }
+
+    /* Section about me */
+    .foto-social {
+        width: 60%;  
+    }
+
+    .foto-social {
+        margin-top: 0%;
+        width: 40%;
+    }
+
+    /* Work Section */
+    .imgWork {
+        padding: 150% 0%;
+        width: 100%;
+    }
+
+    /* Section Educacion */
+    .transparent-box {
+        margin-top: 50%;
+        height: 70%;
+    }
+    
+    .image-list {
+        gap: 30px;
+        width: 80%;
+    }
+    
+    .education img {
+        width: 100%;
+    }
+    
+    .text-overlay {
+        top: 50%;
+    }
+
+    .flags {
+        gap: 20px;
+        width: 50%;
+        margin-left: 25%;
+        margin-top: ;
+    }
+
+    /* Section contato */
+    .container-form {
+        margin-left: 10%;
+        width: 80%;
+    }
+    
+    .container-contato {
+        margin-left: 12%;
+        width: 78%;
+        box-shadow: 8px 8px 0px rgba(7, 7, 7, 0.401);
+    
+    }
+    
+    .container-contato img {
+        width: 7%;
+        height: auto;
+        margin-top: 4%;
+        margin-left: 10%;
+        position: absolute;
+    }
+    
+    .container-contato a {
+    
+        text-decoration: none;
+    }
+    
+    .container-contato h3 {
+        color: #000433;
+        margin-left: 20%;
+        margin-top: 3%;
+        display: inline-block;
+    }
+    
+    .tel-and-img,
+    .email-and-img,
+    .endereco-and-img {
+        display: flex;
+    }
+
+
+    /* cabecalho */
+    .menuDesktop,
+    .btn {
+        display: none;
+    }
 }
