@@ -1,0 +1,613 @@
+/* Estilo Geral */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow: auto;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    background-color: #000433;
+    color: #fff;
+}
+
+.interface {
+    width: 100vw;
+    height: 10%;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+
+
+/* Estilo do Cabeçalho */
+header>.interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    position: fixed;
+    z-index: 1000;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.2);
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    margin-top: 10px;
+    margin-left: 30px;
+    display: inline-block;
+}
+
+.menuDesktop a {
+    color: black;
+    text-decoration: none;
+    transition: .2s;
+    justify-content: center;
+}
+
+.menuDesktop a:hover {
+    color: rgb(165, 142, 142);
+}
+
+.logo {
+    width: 90%;
+    outline: 0;
+    cursor: pointer;
+
+}
+
+/* redes socias */
+.redes-socias {
+    margin-top: 15px;
+    gap: 10px;
+    /* Espaçamento entre ícones */
+}
+
+.linkedin {
+    filter: grayscale(100%);
+    /* Escala de cinza */
+    transition: filter 0.5s ease;
+    /* Transição suave */
+}
+
+.linkedin:hover {
+    filter: grayscale(0%);
+    transform: scale(1.2)
+}
+
+.ghb {
+    filter: grayscale(100%);
+    /* Escala de cinza */
+    transition: filter 0.5s ease;
+    /* Transição suave */
+}
+
+.ghb:hover {
+    filter: grayscale(0%);
+    transform: scale(1.2)
+}
+
+.facebook {
+    filter: grayscale(100%);
+    /* Escala de cinza */
+    transition: filter 0.5s ease;
+    /* Transição suave */
+}
+
+.facebook:hover {
+    filter: grayscale(0%);
+    transform: scale(1.2)
+}
+
+.instagram {
+    filter: grayscale(100%);
+    /* Escala de cinza */
+    transition: filter 0.5s ease;
+    /* Transição suave */
+}
+
+.instagram:hover {
+    filter: grayscale(0%);
+    transform: scale(1.2)
+}
+
+/* botão */
+.btn {
+    margin-bottom: 50px;
+    margin-right: 50%;
+}
+
+.custom-btn {
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-12 {
+    border: none;
+    line-height: 42px;
+    font-size: 18px;
+}
+
+.btn-12 span {
+    background: rgb(200, 23, 23);
+    background: linear-gradient(0deg, rgba(200, 23, 23, 1) 0%, rgb(243, 6, 6) 100%);
+    display: block;
+    position: absolute;
+    width: 130px;
+    border-radius: 5px;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.btn-12 span:nth-child(2) {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -moz-transform-origin: 50% 50% -20px;
+    transform-origin: 50% 50% -20px;
+}
+
+
+.btn-12:hover span:nth-child(2) {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+}
+
+/* imagem de fundo */
+.topo-do-site{
+    background-image: url('../image/chip-7732459_1920 copy.png');
+    background-size: cover;
+}
+
+.topo {
+    position: relative;
+    /* Define o contexto de posicionamento */
+    width: 100%;
+    /* Faz a imagem ocupar toda a largura do container */
+    height: 100%;
+    /* Faz a imagem ocupar toda a altura */
+}
+
+
+.texto {
+    position: absolute;
+    /* Permite posicionar o texto sobre a imagem */
+    top: 0;
+    /* Começa do topo */
+    left: 0;
+    /* Alinha ao lado esquerdo */
+    width: 100%;
+    /* Faz o bloco de texto ocupar toda a largura */
+    height: 100%;
+    /* Faz o bloco de texto ocupar toda a altura */
+    display: flex;
+    /* Usa flexbox para alinhar os textos */
+    flex-direction: column;
+    /* Textos organizados em coluna */
+    justify-content: center;
+    /* Centraliza os textos verticalmente */
+    align-items: center;
+    /* Centraliza os textos horizontalmente */
+    color: white;
+    /* Cor do texto */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    /* Adiciona sombra ao texto */
+    z-index: 2;
+    /* Garante que o texto fique acima da imagem */
+}
+
+#idea,
+#code {
+    padding: 0% 11%;
+}
+
+#solution,
+#creation {
+    padding: 0% 6%;
+}
+
+/* Estilo das palavras */
+.word {
+    font-size: 4rem;
+    /* Começa pequena */
+    font-weight: bold;
+    opacity: 0;
+    /* Começa invisível */
+    position: absolute;
+    animation: growAndFade 12s infinite;
+    /* A animação dura 4s e se repete infinitamente */
+}
+
+/* Animação para as palavras crescerem e desaparecerem */
+@keyframes growAndFade {
+    0% {
+        opacity: 0;
+        font-size: 1rem;
+    }
+
+    25% {
+        opacity: 1;
+        font-size: 6rem;
+    }
+
+
+    50% {
+        opacity: 0;
+        font-size: 6rem;
+    }
+
+
+}
+
+/* Ajustando o tempo de delay para cada palavra */
+.word:nth-child(1) {
+    animation-delay: 0s;
+    /* A palavra "Idea" começa imediatamente */
+}
+
+
+.word:nth-child(2) {
+    animation-delay: 3s;
+    /* A palavra "Code" começa após 1 segundo */
+}
+
+.word:nth-child(3) {
+    animation-delay: 6s;
+    /* A palavra "Creation" começa após 2 segundos */
+}
+
+.word:nth-child(4) {
+    animation-delay: 9s;
+    /* A palavra "Solution" começa após 3 segundos */
+}
+
+/* About me */
+.txt-about-me {
+    /* Largura do conteúdo */
+    margin: 0 auto;
+    /* Centraliza o container */
+    line-height: 1.6;
+    /* Espaçamento entre as linhas */
+    padding-top: 12%;
+
+}
+
+.txt-about-me p {
+    position: relative;
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 2%;
+    padding: 0 7%;
+}
+
+.foto-social {
+    margin-top: 4%;
+    position: relative;
+    width: 40%;
+    float: right;
+    margin: 4px, 10px, 15px, 15px;
+}
+
+/* Works */
+
+.imgWork {
+    padding: 5% 15%;
+    width: 70%;
+}
+
+/* education */
+/* Centraliza o container na página */
+.container {
+    display: flex;
+    /* Habilita Flexbox */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    height: 80vh;
+    /* Altura da tela */
+    background-color: #000433;
+    /* Cor de fundo do site */
+}
+
+/* Cria o quadrado com borda e fundo transparente */
+.transparent-box {
+    width: 85%;
+    height: 40%;
+    border: 1px solid white;
+    /* Define a borda branca */
+    box-shadow: 0 0px 15px rgba(255, 255, 255, 0.5);
+    /* Sombra branca */
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0);
+    /* Fundo transparente */
+}
+
+.image-list {
+    width: 50%;
+    margin-top: 5%;
+    list-style: none;
+    display: flex;
+    /* Alinha os itens horizontalmente */
+    margin-left: 3%;
+
+}
+
+.education img {
+    display: flex;
+    top: 10%;
+    width: 50%;
+    outline: 0;
+    cursor: pointer;
+}
+
+.text-overlay {
+    width: 95%;
+    position: absolute;
+    text-align: center;
+    justify-items: auto;
+    top: 70%;
+    /* Centraliza verticalmente */
+    left: 50%;
+    /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Ajusta a posição */
+    color: #fff;
+    font-size: 30px;
+    opacity: 0;
+    /* Invisível por padrão */
+    transition: opacity 0.3s ease;
+    /* Transição suave */
+}
+
+.image-with-text:hover .text-overlay {
+    opacity: 1;
+    /* Mostra o texto ao passar o mouse */
+}
+
+/* flags */
+.flags {
+    width: 30%;
+    display: flex;
+    position: absolute;
+    list-style: none;
+    margin-left: 36%;
+}
+
+/* formulario */
+
+.field {
+    width: 70%;
+    margin: 10px 45px;
+}
+
+.field label {
+    padding-left: 10px;
+    font-size: 1.1em;
+    display: block;
+    width: 100%;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+    width: 100%;
+    padding-left: 15px;
+    height: 30px;
+    border-radius: 15px;
+    border: 1px solid #08036c;
+    outline: none;
+}
+
+input#nao {
+    margin-left: 30px;
+}
+
+textarea {
+    line-height: 20px;
+    padding: 10px;
+    height: 90px;
+    resize: none;
+}
+
+input[type=submit] {
+    display: block;
+    background-color: #ffffff;
+    height: 35px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 15px;
+}
+
+
+
+/* formulario caixa branca */
+.container-form {
+    display: grid;
+    position: relative;
+    top: 20%;
+    margin-left: 35%;
+    width: 25%;
+    height: 60%;
+    background-color: rgba(253, 253, 253, 0.38);
+    /* Fundo transparente */
+}
+
+.container-contato {
+    position: relative;
+    top: 30%;
+    margin-left: 50%;
+    width: 90%;
+    height: 110%;
+    background-color: rgb(253, 253, 253);
+    box-shadow: -8px -8px 0px rgba(7, 7, 7, 0.401);
+
+}
+
+.container-contato img {
+    width: 7%;
+    height: auto;
+    margin-top: 4%;
+    margin-left: 10%;
+    position: absolute;
+}
+
+.container-contato a {
+
+    text-decoration: none;
+}
+
+.container-contato h3 {
+    color: #000433;
+    margin-left: 20%;
+    margin-top: 3%;
+    display: inline-block;
+}
+
+.tel-and-img,
+.email-and-img,
+.endereco-and-img {
+    display: flex;
+}
+
+/* footer */
+
+.site-footer {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px 10px;
+    text-align: left;
+    font-size: 8px;
+    border-top: 5px solid rgba(0, 0, 0, 0.2);
+}
+
+/* responsivel */
+@media screen and (max-width: 480px) {
+    /* Section topo */
+    .topo-do-site{
+        background-image: url('../image/lampada.png');
+        background-size: 80%;
+        background-repeat: no-repeat; /* Impede a repetição da imagem */
+        background-position: top center;
+        height: 90vh; /* Define uma altura proporcional à tela */
+        
+    }
+
+    .texto {
+    justify-content: space-between;
+    /* Centraliza os textos verticalmente */
+    }
+
+    /* Section about me */
+    .foto-social {
+        width: 60%;  
+    }
+
+    .foto-social {
+        margin-top: 0%;
+        width: 40%;
+    }
+
+    /* Work Section */
+    .imgWork {
+        padding: 150% 0%;
+        width: 100%;
+    }
+
+    /* Section Educacion */
+    .transparent-box {
+        margin-top: 50%;
+        height: 70%;
+    }
+    
+    .image-list {
+        gap: 30px;
+        width: 80%;
+    }
+    
+    .education img {
+        width: 100%;
+    }
+    
+    .text-overlay {
+        top: 50%;
+    }
+
+    .flags {
+        gap: 20px;
+        width: 50%;
+        margin-left: 25%;
+        margin-top: ;
+    }
+
+    /* Section contato */
+    .container-form {
+        margin-left: 10%;
+        width: 80%;
+    }
+    
+    .container-contato {
+        margin-left: 12%;
+        width: 78%;
+        box-shadow: 8px 8px 0px rgba(7, 7, 7, 0.401);
+    
+    }
+    
+    .container-contato img {
+        width: 7%;
+        height: auto;
+        margin-top: 4%;
+        margin-left: 10%;
+        position: absolute;
+    }
+    
+    .container-contato a {
+    
+        text-decoration: none;
+    }
+    
+    .container-contato h3 {
+        color: #000433;
+        margin-left: 20%;
+        margin-top: 3%;
+        display: inline-block;
+    }
+    
+    .tel-and-img,
+    .email-and-img,
+    .endereco-and-img {
+        display: flex;
+    }
+
+
+    /* cabecalho */
+    .menuDesktop,
+    .btn {
+        display: none;
+    }
+}
