@@ -704,6 +704,11 @@ footer {
         height: 70%;
     }
 
+    .education img {
+        width: 50%;
+        margin-top: 10%;
+    }
+
     .flags {
         margin-top: 100%;
         /* Distância das bandeiras em relação à transparent-box */
