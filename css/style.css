@@ -9,71 +9,125 @@ body {
     overflow: auto;
 }
 
+.flex {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
 section {
     width: 100%;
     height: 100vh;
     background-color: #000433;
     color: #fff;
+    display: flex;
+    /* Ativa flexbox no body */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: flex-start;
+    /* Alinha no topo */
+
 }
 
-.interface {
-    width: 100vw;
+header {
+    width: 100%;
     height: 10%;
-    margin: auto;
-}
-
-.flex {
-    display: flex;
-}
-
-
-
-/* Estilo do Cabeçalho */
-header>.interface {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     background-color: #fff;
     position: fixed;
+    display: flex;
+    align-items: center;
+    /* Centraliza os itens no eixo vertical */
     z-index: 1000;
     border-bottom: 5px solid rgba(0, 0, 0, 0.2);
+    padding: 0 40px;
+    box-sizing: border-box;
+    /* Inclui o padding no tamanho total */
 }
 
-header nav ul {
-    list-style: none;
+/* Links do Cabeçalho */
+.header-menu {
+    display: flex;
+    gap: 30px;
 }
 
-header nav ul li {
-    margin-top: 10px;
-    margin-left: 30px;
-    display: inline-block;
-}
-
-.menuDesktop a {
+.header-menu a {
     color: black;
-    text-decoration: none;
     transition: .2s;
-    justify-content: center;
 }
 
-.menuDesktop a:hover {
+.header-menu a:hover {
     color: rgb(165, 142, 142);
 }
 
-.logo {
-    width: 90%;
-    outline: 0;
+/* botão cabeçalho */
+.btn {
+    display: flex;
+    /* Torna o botão um contêiner flexível */
+    margin-bottom: 4%;
+    margin-left: 20px;
+}
+
+.custom-btn {
+    color: #fff;
+    border-radius: 5px;
     cursor: pointer;
-
+    transition: all 0.3s ease;
 }
 
-/* redes socias */
-.redes-socias {
-    margin-top: 15px;
-    gap: 10px;
-    /* Espaçamento entre ícones */
+.btn-12 {
+    border: none;
+    line-height: 42px;
+    font-size: 18px;
 }
 
+.btn-12 span {
+    background: rgb(200, 23, 23);
+    background: linear-gradient(0deg, rgba(200, 23, 23, 1) 0%, rgb(243, 6, 6) 100%);
+    display: block;
+    position: absolute;
+    width: 130px;
+    border-radius: 5px;
+    text-align: center;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.btn-12 span:nth-child(2) {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -moz-transform-origin: 50% 50% -20px;
+    transform-origin: 50% 50% -20px;
+}
+
+
+.btn-12:hover span:nth-child(2) {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+}
+
+
+/* logo e social midia */
+.logo-e-social-midia {
+    display: flex;
+    margin-left: auto;
+    /* Empurra a logo para o lado direito */
+    gap: 20px;
+}
+
+.logo-e-social-midia li {
+    margin-top: 25px;
+}
+
+/* social midia efeito*/
 .linkedin {
     filter: grayscale(100%);
     /* Escala de cinza */
@@ -122,97 +176,112 @@ header nav ul li {
     transform: scale(1.2)
 }
 
-/* botão */
-.btn {
-    margin-bottom: 50px;
-    margin-right: 50%;
-}
-
-.custom-btn {
-    color: #fff;
-    border-radius: 5px;
+/* menu-mobile */
+.btn-open-menu i {
+    display: none;
+    color: #000000;
+    font-size: 3rem;
     cursor: pointer;
-    transition: all 0.3s ease;
 }
 
-.btn-12 {
-    border: none;
-    line-height: 42px;
-    font-size: 18px;
+.menu-mobile {
+    background-color: rgba(255, 255, 255, 0.993);
+    height: 100vh;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 999999;
+    width: 0%;
+    overflow: hidden;
+    transition: .2s;
 }
 
-.btn-12 span {
-    background: rgb(200, 23, 23);
-    background: linear-gradient(0deg, rgba(200, 23, 23, 1) 0%, rgb(243, 6, 6) 100%);
-    display: block;
+.menu-mobile .btn-closed-menu {
     position: absolute;
-    width: 130px;
-    border-radius: 5px;
-    text-align: center;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-transition: all .3s;
-    transition: all .3s;
+    top: 2%;
+    right: 5%;
+    /* Posiciona o ícone à direita */
 }
 
-.btn-12 span:nth-child(2) {
-    -webkit-transform: rotateX(0deg);
-    -moz-transform: rotateX(0deg);
-    transform: rotateX(0deg);
-    -webkit-transform-origin: 50% 50% -20px;
-    -moz-transform-origin: 50% 50% -20px;
-    transform-origin: 50% 50% -20px;
+.menu-mobile .btn-closed-menu i {
+    color: #080807;
+    /* Cor do ícone (laranja, por exemplo) */
+    font-size: 2.5rem;
+    /* Tamanho razoável do ícone */
+    left: 0%;
+    cursor: pointer;
+    /* Adiciona o ponteiro ao passar o mouse, indicando que é interativo */
 }
 
+.menu-mobile nav ul {
+    text-align: left;
+    margin-top: 4rem;
+}
 
-.btn-12:hover span:nth-child(2) {
-    -webkit-transform: rotateX(-90deg);
-    -moz-transform: rotateX(-90deg);
-    transform: rotateX(-90deg);
+.menu-mobile nav ul li a {
+    color: #000000;
+    font-size: 1.6rem;
+    font-weight: 300;
+    padding: 3% 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: #b0b0b0;
+    color: #fff;
+}
+
+.social-midia-menu-mobile{
+    margin-left: 10%;
+    gap: 13%;
+    display: flex;
+    margin-top: 20%;
+
+}
+
+.overlay-menu {
+    background-color: #fcfbfb7a;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 888888;
+    display: none;
 }
 
 /* imagem de fundo */
-.topo-do-site{
-    background-image: url('../image/chip-7732459_1920 copy.png');
-    background-size: cover;
-}
-
-.topo {
+.lampada {
+    width: auto;
+    height: 100vh;
     position: relative;
-    /* Define o contexto de posicionamento */
-    width: 100%;
-    /* Faz a imagem ocupar toda a largura do container */
-    height: 100%;
-    /* Faz a imagem ocupar toda a altura */
+    /* Alterado para 'relative' para não sair da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 
 .texto {
     position: absolute;
-    /* Permite posicionar o texto sobre a imagem */
+    /* Permite posicionar o texto sobre qualquer elemento */
     top: 0;
-    /* Começa do topo */
+    /* Alinha o texto ao topo */
     left: 0;
-    /* Alinha ao lado esquerdo */
     width: 100%;
     /* Faz o bloco de texto ocupar toda a largura */
-    height: 100%;
-    /* Faz o bloco de texto ocupar toda a altura */
     display: flex;
-    /* Usa flexbox para alinhar os textos */
-    flex-direction: column;
-    /* Textos organizados em coluna */
+    /* Usa flexbox para alinhar o conteúdo */
     justify-content: center;
-    /* Centraliza os textos verticalmente */
-    align-items: center;
-    /* Centraliza os textos horizontalmente */
-    color: white;
-    /* Cor do texto */
+    /* Centraliza horizontalmente */
+    align-items: flex-start;
+    /* Mantém o conteúdo no topo (flex-start) */
+    padding-top: 5%;
+    /* Espaçamento entre o topo e o texto */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     /* Adiciona sombra ao texto */
     z-index: 2;
     /* Garante que o texto fique acima da imagem */
+
 }
 
 #idea,
@@ -281,37 +350,78 @@ header nav ul li {
 }
 
 /* About me */
-.txt-about-me {
-    /* Largura do conteúdo */
-    margin: 0 auto;
-    /* Centraliza o container */
-    line-height: 1.6;
-    /* Espaçamento entre as linhas */
-    padding-top: 12%;
-
+.container-about {
+    display: flex;
+    /* Habilita Flexbox */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    height: 100vh;
+    /* Altura da tela */
+    width: 100%;
+    overflow: hidden;
+    /* Garante que nada ultrapasse os limites da section */
+    padding: 3rem;
 }
 
-.txt-about-me p {
+.container-about img {
     position: relative;
-    font-size: 20px;
+    max-width: 100%;
+    /* Garante que a largura da imagem não ultrapasse o contêiner */
+    max-height: 100%;
+    /* Garante que a altura da imagem não ultrapasse o contêiner */
+    object-fit: contain;
+    /* Mantém a imagem dentro da área sem distorções */
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 40px;
+    }
+}
+
+.txt-about h2 {
+    font-size: 2.8vw;
     text-align: justify;
-    margin-bottom: 2%;
-    padding: 0 7%;
 }
 
-.foto-social {
-    margin-top: 4%;
-    position: relative;
-    width: 40%;
-    float: right;
-    margin: 4px, 10px, 15px, 15px;
+.txt-about p {
+    font-size: 2vw;
+    text-align: justify;
+}
+
+.txt-about h3 {
+    font-size: 2vw;
+    text-align: center;
+}
+
+.txtGray {
+    color: #7f7f7f;
 }
 
 /* Works */
+.construction {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    /* Alterado para 'relative' para não sair da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-.imgWork {
-    padding: 5% 15%;
-    width: 70%;
+.construction img {
+    max-width: 100%;
+    height: auto;
+    /* Mantém a proporção da imagem */
+    object-fit: contain;
+    /* Ajusta a imagem para que ela se encaixe dentro da section */
 }
 
 /* education */
@@ -323,43 +433,35 @@ header nav ul li {
     /* Centraliza horizontalmente */
     align-items: center;
     /* Centraliza verticalmente */
-    height: 80vh;
+    height: 100vh;
     /* Altura da tela */
-    background-color: #000433;
-    /* Cor de fundo do site */
 }
 
 /* Cria o quadrado com borda e fundo transparente */
 .transparent-box {
     width: 85%;
     height: 40%;
-    border: 1px solid white;
+    border: 0.2rem solid white;
     /* Define a borda branca */
-    box-shadow: 0 0px 15px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0rem 1rem rgba(255, 255, 255, 0.5);
     /* Sombra branca */
     position: absolute;
     display: flex;
     justify-content: center;
+    /* Centraliza horizontalmente */
+    text-align: center;
     background-color: rgba(0, 0, 0, 0);
     /* Fundo transparente */
+    cursor: pointer;
 }
 
-.image-list {
-    width: 50%;
-    margin-top: 5%;
-    list-style: none;
-    display: flex;
-    /* Alinha os itens horizontalmente */
-    margin-left: 3%;
+.education li {
+    margin-top: 10%;
 
 }
 
 .education img {
-    display: flex;
-    top: 10%;
-    width: 50%;
-    outline: 0;
-    cursor: pointer;
+    width: 30%;
 }
 
 .text-overlay {
@@ -367,44 +469,40 @@ header nav ul li {
     position: absolute;
     text-align: center;
     justify-items: auto;
-    top: 70%;
+    top: 45%;
     /* Centraliza verticalmente */
     left: 50%;
     /* Centraliza horizontalmente */
     transform: translate(-50%, -50%);
     /* Ajusta a posição */
     color: #fff;
-    font-size: 30px;
+    font-size: 1.5rem;
     opacity: 0;
     /* Invisível por padrão */
     transition: opacity 0.3s ease;
     /* Transição suave */
 }
 
-.image-with-text:hover .text-overlay {
+.image-with-text:hover.text-overlay {
     opacity: 1;
     /* Mostra o texto ao passar o mouse */
 }
 
 /* flags */
 .flags {
-    width: 30%;
-    display: flex;
     position: absolute;
-    list-style: none;
-    margin-left: 36%;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    width: 30%;
+    /* Usa 100% da largura disponível */
+    margin-top: 40%;
+    /* Distância das bandeiras em relação à transparent-box */
 }
 
 /* formulario */
-
-.field {
-    width: 70%;
-    margin: 10px 45px;
-}
-
 .field label {
-    padding-left: 10px;
-    font-size: 1.1em;
+    font-size: 1.4rem;
     display: block;
     width: 100%;
 }
@@ -412,202 +510,227 @@ header nav ul li {
 input[type=text],
 input[type=email],
 textarea {
-    width: 100%;
-    padding-left: 15px;
-    height: 30px;
-    border-radius: 15px;
-    border: 1px solid #08036c;
+    height: 2.5rem;
+    width: 25rem;
+    padding-left: 1rem;
+    border-radius: 1rem;
+    border: 0.2rem solid #b0b0b0;
     outline: none;
-}
-
-input#nao {
-    margin-left: 30px;
+    margin-bottom: 1.2rem;
+    /* Espaçamento entre os campos */
+    font-size: 1.3rem;
 }
 
 textarea {
     line-height: 20px;
-    padding: 10px;
-    height: 90px;
+    padding: 0.9rem;
+    height: 7.5rem;
+    width: 25rem;
     resize: none;
+    font-size: 1.3rem;
 }
 
 input[type=submit] {
     display: block;
     background-color: #ffffff;
-    height: 35px;
+    color: #000000;
+    height: 2.6rem;
     border: none;
     outline: 0;
     cursor: pointer;
-    width: 100px;
+    width: 8.1rem;
     margin: 0 auto;
+    font-size: 1rem;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 0.9rem;
 }
 
-
-
-/* formulario caixa branca */
 .container-form {
-    display: grid;
-    position: relative;
-    top: 20%;
-    margin-left: 35%;
-    width: 25%;
-    height: 60%;
-    background-color: rgba(253, 253, 253, 0.38);
-    /* Fundo transparente */
-}
-
-.container-contato {
-    position: relative;
-    top: 30%;
-    margin-left: 50%;
-    width: 90%;
-    height: 110%;
-    background-color: rgb(253, 253, 253);
-    box-shadow: -8px -8px 0px rgba(7, 7, 7, 0.401);
-
-}
-
-.container-contato img {
-    width: 7%;
-    height: auto;
-    margin-top: 4%;
-    margin-left: 10%;
-    position: absolute;
-}
-
-.container-contato a {
-
-    text-decoration: none;
-}
-
-.container-contato h3 {
-    color: #000433;
-    margin-left: 20%;
-    margin-top: 3%;
-    display: inline-block;
-}
-
-.tel-and-img,
-.email-and-img,
-.endereco-and-img {
+    margin-top: 6rem;
+    /* borda do formulario */
+    border: 0.1rem solid white;
     display: flex;
+    /* Habilita flexbox */
+    justify-content: center;
+    /* Centraliza verticalmente */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    padding: 1.25rem;
+    /* Espaçamento interno */
 }
+
 
 /* footer */
-
-.site-footer {
-    background-color: #ffffff;
-    color: #000000;
-    padding: 20px 10px;
-    text-align: left;
-    font-size: 8px;
-    border-top: 5px solid rgba(0, 0, 0, 0.2);
+footer {
+    flex-direction: column;
+    /* Organiza os itens em uma coluna (verticalmente) */
+    padding: 1rem;
+    /* Ajusta o espaçamento ao redor do footer */
 }
 
-/* responsivel */
-@media screen and (max-width: 480px) {
-    /* Section topo */
-    .topo-do-site{
-        background-image: url('../image/lampada.png');
-        background-size: 80%;
-        background-repeat: no-repeat; /* Impede a repetição da imagem */
-        background-position: top center;
-        height: 90vh; /* Define uma altura proporcional à tela */
-        
+/* Estilos para o container de contatos */
+.container-contato {
+    display: flex;
+    /* Ativa o Flexbox */
+    gap: 7%;
+    /* Adiciona um espaçamento de 3rem entre os links */
+}
+
+/* Estilos para cada link */
+.container-contato a {
+    display: flex;
+    /* Exibe a imagem e o texto em linha */
+    align-items: center;
+    /* Alinha verticalmente os itens no centro */
+    color: #333;
+    /* Cor do texto */
+}
+
+/* Estilos para as imagens dentro dos links */
+.container-contato a img {
+    width: 40px;
+    /* Define o tamanho das imagens */
+    height: auto;
+    /* Mantém a proporção das imagens */
+    margin-right: 1rem;
+    /* Adiciona um espaçamento entre a imagem e o texto */
+}
+
+/* Estilos para os textos dentro dos links */
+.container-contato a h2 {
+    font-size: 1.2rem;
+    /* Ajusta o tamanho da fonte dos textos */
+}
+
+/* O texto Henrique fica no topo */
+.container-contato p {
+    font-size: 1.2rem;
+    /* Ajusta o tamanho da fonte do texto */
+    color: #333;
+    /* Cor do texto */
+    display: flex;
+    /* Exibe a imagem e o texto em linha */
+    align-items: center;
+    /* Alinha verticalmente os itens no centro */
+
+}
+
+/* responsivo */
+/* Adicionando um ajuste específico para dispositivos menores */
+@media (max-width: 902px) {
+
+    /* headear */
+    header {
+        height: 15%;
+        padding: 0 15px;
+
+    }
+
+    .menuDesktop,
+    .btn,
+    .logo-e-social-midia li {
+        display: none;
+    }
+
+    /* menu mobile */
+    .menu-mobile.open-menu {
+        width: 70%;
+    }
+
+    .menu-mobile.open-menu~.overlay-menu {
+        display: block;
+    }
+
+    .btn-open-menu i {
+        display: block;
+    }
+
+    /* topo do site */
+    .lampada {
+        height: 70vh;
+        margin-top: 20%;
+    }
+
+    @keyframes growAndFade {
+        0% {
+            opacity: 0;
+            font-size: 1rem;
+        }
+
+        25% {
+            opacity: 1;
+            font-size: 4rem;
+        }
+
+
+        50% {
+            opacity: 0;
+            font-size: 4rem;
+        }
+
+
     }
 
     .texto {
-    justify-content: space-between;
-    /* Centraliza os textos verticalmente */
+        padding-top: 20%;
     }
 
-    /* Section about me */
-    .foto-social {
-        width: 60%;  
+    /* about-me */
+    .container-about {
+        flex-direction: column-reverse;
+        padding: 1rem;
     }
 
-    .foto-social {
-        margin-top: 0%;
-        width: 40%;
+    .container-about img {
+        padding: 5% 0%;
     }
 
-    /* Work Section */
-    .imgWork {
-        padding: 150% 0%;
-        width: 100%;
+    .txt-about h2 {
+        font-size: 1.5rem;
+        text-align: center;
     }
 
-    /* Section Educacion */
+    .txt-about p {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .txt-about h3 {
+        font-size: 1.2rem;
+    }
+
+    /* education */
     .transparent-box {
-        margin-top: 50%;
         height: 70%;
-    }
-    
-    .image-list {
-        gap: 30px;
-        width: 80%;
-    }
-    
-    .education img {
-        width: 100%;
-    }
-    
-    .text-overlay {
-        top: 50%;
     }
 
     .flags {
-        gap: 20px;
-        width: 50%;
-        margin-left: 25%;
-        margin-top: ;
+        margin-top: 100%;
+        /* Distância das bandeiras em relação à transparent-box */
     }
 
-    /* Section contato */
-    .container-form {
-        margin-left: 10%;
-        width: 80%;
+    /* formulario */
+    .field label {
+        font-size: 1rem;
     }
-    
+
+    input[type=text],
+    input[type=email],
+    textarea {
+        height: 1.8rem;
+        width: 17rem;
+    }
+
+    textarea {
+        line-height: 20px;
+        height: 9rem;
+    }
+
+    /* footer */
+
     .container-contato {
-        margin-left: 12%;
-        width: 78%;
-        box-shadow: 8px 8px 0px rgba(7, 7, 7, 0.401);
-    
-    }
-    
-    .container-contato img {
-        width: 7%;
-        height: auto;
-        margin-top: 4%;
-        margin-left: 10%;
-        position: absolute;
-    }
-    
-    .container-contato a {
-    
-        text-decoration: none;
-    }
-    
-    .container-contato h3 {
-        color: #000433;
-        margin-left: 20%;
-        margin-top: 3%;
-        display: inline-block;
-    }
-    
-    .tel-and-img,
-    .email-and-img,
-    .endereco-and-img {
-        display: flex;
+        flex-direction: column;
+        gap: 2rem;
     }
 
-
-    /* cabecalho */
-    .menuDesktop,
-    .btn {
-        display: none;
-    }
 }

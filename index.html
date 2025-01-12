@@ -16,61 +16,99 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <!-- Finally Google Fontes-->
+
+    <!-- Boot Strap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Boot Strap -->
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="image/logoNovaIco.png">
+    <script src="app.js/menu.js" defer></script>
 
 </head>
 
 <body>
 
     <header>
-        <div class="interface">
-            <nav class="menuDesktop">
+
+        <div id='btn-open-menu' class='btn-open-menu'>
+            <i class="bi bi-list"></i>
+        </div><!-- open-menu -->
+
+        <div class='menu-mobile' id='menu-mobile'>
+            <div class="btn-closed-menu">
+                <i class="bi bi-x-lg"></i>
+            </div><!-- btn-closed -->
+
+            <nav>
                 <ul>
-                    <!-- links de navegação -->
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about-me">About Me</a></li>
+                    <li> <a href="#work">Works</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="social-midia-menu-mobile"><!-- Logo -->
+                <li><a href="https://www.linkedin.com/feed/" target="_blank">
+                        <img src="redeSocial/linkedin.png" alt="" class="linkedin" loading="lazy">
+                    </a></li><!-- linkedin -->
+                <li><a href="https://github.com/rickdf7" target="_blank">
+                        <img src="redeSocial/githubroxoc.png" alt="" class="ghb" loading="lazy">
+                    </a></li><!-- github -->
+                <li><a href="https://www.facebook.com/henrique.aguiar.710667/" target="_blank">
+                        <img src="redeSocial/facebook.png" alt="" class="facebook" loading="lazy">
+                    </a></li><!-- facebook -->
+                <li><a href="https://www.instagram.com/henrique_s_aguiar/" target="_blank">
+                        <img src="redeSocial/instagram copy.png" alt="" class="instagram" loading="lazy">
+                    </a></li>
+            </div><!-- logo -->
+
+        </div><!-- menu-mobile -->
+
+        <div class="overlay-menu" id="overlay-menu"></div>
+
+        <nav class="menuDesktop">
+            <div><!-- header-menu -->
+                <ul class="header-menu">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about-me">About Me</a></li>
                     <li> <a href="#work">Works</a></li>
                     <li><a href="#education">Education</a></li>
                 </ul>
-            </nav><!-- fim links de navegação -->
+            </div><!-- header-menu -->
+        </nav><!-- menuDesktop -->
 
-            <!-- botão contato -->
-            <div class="btn">
-                <a href="#contato">
-                    <button class="custom-btn btn-12"><span>Click!</span><span>Contact</span></button>
-                </a>
-            </div>
-            <!-- fim botão contato -->
+        <div class="btn">
+            <a href="#contato">
+                <button class="custom-btn btn-12"><span>Click!</span><span>Contact</span></button>
+            </a>
+        </div><!-- btn -->
 
-            <!-- redes sociais -->
-            <div class="redes-socias">
-                <a href="https://www.linkedin.com/feed/" target="_blank">
+        <div class="logo-e-social-midia"><!-- Logo -->
+            <li><a href="https://www.linkedin.com/feed/" target="_blank">
                     <img src="redeSocial/linkedin.png" alt="" class="linkedin" loading="lazy">
-                </a><!-- linkedin -->
-                <a href="https://github.com/rickdf7" target="_blank">
+                </a></li><!-- linkedin -->
+            <li><a href="https://github.com/rickdf7" target="_blank">
                     <img src="redeSocial/githubroxoc.png" alt="" class="ghb" loading="lazy">
-                </a><!-- github -->
-                <a href="https://www.facebook.com/henrique.aguiar.710667/" target="_blank">
+                </a></li><!-- github -->
+            <li><a href="https://www.facebook.com/henrique.aguiar.710667/" target="_blank">
                     <img src="redeSocial/facebook.png" alt="" class="facebook" loading="lazy">
-                </a><!-- facebook -->
-                <a href="https://www.instagram.com/henrique_s_aguiar/" target="_blank">
+                </a></li><!-- facebook -->
+            <li><a href="https://www.instagram.com/henrique_s_aguiar/" target="_blank">
                     <img src="redeSocial/instagram copy.png" alt="" class="instagram" loading="lazy">
-                </a>
-            </div>
-            <!-- fim redes socias -->
-
-            <!-- Logo topo -->
+                </a></li>
             <a href="index.html">
-                <img src="image/logoNovaTopoSite.png" alt="" class="logo" loading="lazy">
-            </a><!-- fim logo logo topo -->
-
-        </div><!-- interface! -->
+                <img src="image/logoNovaTopoSite.png" alt="" loading="lazy">
+            </a>
+        </div><!-- logo -->
     </header>
 
     <main>
         <!-- topo-do-site -->
         <section id="home" class="topo-do-site">
+            <img src="image/lampada.png" alt="" class="lampada">
 
             <div class="topo">
                 <div class="texto">
@@ -85,103 +123,89 @@
 
         <!-- about-me -->
         <section id="about-me" class="about-me">
-            <img src="image/Social fundo branco copy.png" alt="foto sobre mim" class="foto-social" loading="lazy">
 
-            <div class="txt-about-me">
-                <p> My name is Henrique Aguiar, and I live in Hudson County, NJ. I’m passionate about
-                    transforming ideas into practical, efficient solutions. Whether it’s through innovative design or
-                    streamlined systems, I strive to bring creativity and functionality together to achieve impactful
-                    results.</p>
-                <p>
-                    Since childhood, I’ve been captivated by how things work. My curiosity often led me to take things
-                    apart, delve into their mechanisms, and uncover what made them function. This innate curiosity grew
-                    into a deep passion for technology and problem-solving.
-                </p>
-                <p>
-                    Today, I’m pursuing a degree in System Analysis and Development, refining my skills in creating and
-                    understanding complex systems. In addition to my technical pursuits, my experience with Photoshop
-                    has
-                    been instrumental in designing visually engaging and user-friendly interfaces for my projects.
-                </p>
-                <p>
-                    I’m passionate about blending functionality with aesthetics, striving to build systems that are not
-                    only
-                    efficient but also visually compelling. Welcome to my space—feel free to explore my work and reach
-                    out.
-                </p>
-            </div><!-- txt about me -->
+            <div class="container-about">
+                <div class="txt-about">
+                    <h2>I specialize in transforming ideas into <span class="txtGray">efficient solutions</span>.</h2>
+                    <br>
+                    <p>
+                        With a passion for technology and problem-solving, I’m pursuing a degree in Systems Analysis
+                        and
+                        Development.
+                        <br>
+                        Skilled in Photoshop, I craft user-focused interfaces that blend functionality with
+                        aesthetics.
+                    </p>
+                    <br>
+                    <h3 class="txtGray">Explore my work and connect for collaborations!</h3>
+                </div><!-- txt about me -->
+
+                <img src="image/fotopedagno copy.png" alt="foto sobre mim" class="foto-social" loading="lazy">
+
+            </div>
+
         </section> <!-- about-me -->
 
         <section id="work" class="work">
-            <img src="image/monitor-under.png" alt="" class="imgWork">
+            <div class="construction">
+                <img src="image/monitor-under.png" alt="" class="imgWork">
+            </div>
         </section> <!-- works -->
 
         <section id="education" class="education">
             <div class="container">
                 <div class="transparent-box">
-                    <ul class="image-list">
-                        <li><!-- html -->
-                            <div class="image-with-text">
-                                <img src="programas/html.png" alt="" loading="lazy">
-                                <span class="text-overlay">I master HTML to create structured, semantic, and
-                                    responsive pages. I use essential tags to turn ideas into clear layouts,
-                                    optimizing the user experience.
-                                </span><!-- text-overlay html -->
-                            </div><!-- image-with-text html -->
-                        </li><!-- html -->
 
-                        <li><!-- CSS -->
-                            <div class="image-with-text">
-                                <img src="programas/css.png" alt="" loading="lazy">
-                                <span class="text-overlay">I use CSS to create visually stunning, responsive designs
-                                    with seamless layouts
-                                    and interactive effects that enhance user experience.
-                                </span><!-- text-overlay CSS -->
-                            </div>
-                        </li><!-- CSS -->
+                    <div class="image-with-text">
+                        <li><img src="programas/html.png" alt="" loading="lazy"></li>
+                        <span class="text-overlay">I master HTML to create structured, semantic, and
+                            responsive pages. I use essential tags to turn ideas into clear layouts,
+                            optimizing the user experience.
+                        </span><!-- text-overlay html -->
+                    </div><!-- image-with-text html -->
 
-                        <li><!-- java - Script -->
-                            <div class="image-with-text">
-                                <img src="programas/JS.png" alt="" loading="lazy">
-                                <span class="text-overlay">
-                                    JavaScript is the key to creating dynamic interactions and powerful solutions. With
-                                    it, I turn ideas into interactive and engaging web experiences.
-                                </span><!-- text-overlay -->
-                            </div><!-- image-with-text -->
-                        </li><!-- java - script -->
+                    <div class="image-with-text">
+                        <li><img src="programas/css.png" alt="" loading="lazy"></li>
+                        <span class="text-overlay">I use CSS to create visually stunning, responsive designs
+                            with seamless layouts
+                            and interactive effects that enhance user experience.
+                        </span><!-- text-overlay CSS -->
+                    </div>
 
-                        <li><!-- python -->
-                            <div class="image-with-text">
-                                <img src="programas/python.png" alt="" loading="lazy">
-                                <span class="text-overlay">
-                                    Python is my tool for building efficient solutions, from automation to complex
-                                    applications, with clean and maintainable code.
-                                    </spam> <!-- python -->
-                            </div><!-- image-with-text -->
-                        </li><!-- python -->
+                    <div class="image-with-text">
+                        <li><img src="programas/JS.png" alt="" loading="lazy"></li>
+                        <span class="text-overlay">
+                            JavaScript is the key to creating dynamic interactions and powerful solutions. With
+                            it, I turn ideas into interactive and engaging web experiences.
+                        </span><!-- text-overlay -->
+                    </div><!-- image-with-text -->
 
-                        <li><!-- photshop -->
-                            <div class="image-with-text">
-                                <img src="programas/photo_shop.png" alt="" loading="lazy">
-                                <span class="text-overlay">
-                                    Photoshop is essential for creating impactful designs in web development, turning
-                                    ideas
-                                    into stunning layouts and ensuring a perfect aesthetic for each project.
-                                </span><!-- text-overlay -->
-                            </div><!-- image-with-text -->
-                        </li><!-- Photoshop -->
+                    <div class="image-with-text">
+                        <li><img src="programas/python.png" alt="" loading="lazy"></li>
+                        <span class="text-overlay">
+                            Python is my tool for building efficient solutions, from automation to complex
+                            applications, with clean and maintainable code.
+                            </spam> <!-- text-overlay -->
+                    </div><!-- image-with-text -->
 
-                    </ul><!-- image-list -->
+                    <div class="image-with-text">
+                        <li><img src="programas/photo_shop.png" alt="" loading="lazy"></li>
+                        <span class="text-overlay">
+                            Photoshop is essential for creating impactful designs in web development, turning
+                            ideas
+                            into stunning layouts and ensuring a perfect aesthetic for each project.
+                        </span><!-- text-overlay -->
+                    </div><!-- image-with-text -->
 
                 </div><!-- transparent-box -->
 
-            </div><!-- container -->
+                <div class="flags">
+                    <img src="image/EUA.png" alt="">
+                    <img src="image/Brazil2.png" alt="">
+                    <img src="image/SPAN2.png" alt="">
+                </div><!-- flags -->
 
-            <div class="flags">
-                <li><img src="image/EUA.png" alt=""></li>
-                <li><img src="image/Brazil2.png" alt=""></li>
-                <li><img src="image/SPAN2.png" alt=""></li>
-            </div><!-- flags -->
+            </div><!-- container -->
 
         </section><!-- education -->
 
@@ -207,7 +231,7 @@
                     </div>
 
                     <div class="field">
-                        <label for="mensagem">Mensagem:</label>
+                        <label for="mensagem">Mensage:</label>
                         <textarea name="mensagem" id="mensagem" placeholder="Mensage*" required></textarea>
                     </div>
 
@@ -215,41 +239,31 @@
 
                 </form>
 
-                <div class="container-contato">
-
-                    <a href="https://wa.me/+19292886640" target="_blank">
-                        <li class="tel-and-img">
-                            <img src="image/tel.png" alt="">
-                            <h3 class="tel">(929)288-6640</h3>
-                        </li>
-                    </a>
-
-                    <a href="mailto:rickdf7@gmail.com?subject=Olá&body=Gostaria de mais informações.">
-                        <li class="email-and-img">
-                            <img src="image/mail.png" alt="">
-                            <h3 class="email">rickdf7@gmail.com</h3>
-                        </li>
-                    </a>
-
-                    <a href="https://www.google.com/maps/search/?api=1&query=North+Bergen,+New+Jersey,+NJßßßß"
-                        target="_blank">
-                        <li class="endereco-and-img">
-                            <img src="image/gps.png" alt="">
-                            <h3 class="endereco">North Bergen - NJ</h3>
-                        </li>
-                    </a>
-
-                </div><!-- container-contato -->
-
             </div><!-- container-form -->
 
         </section><!-- contato -->
 
     </main>
 
-    <footer class="site-footer">
-        <h2>© 2025 Henrique Aguiar, All rights reserved.</h2>
-        
+    <footer class="footer">
+
+        <div class="container-contato">
+            <a href="https://wa.me/+19292886640" target="_blank">
+                <img src="image/tel.png" alt="">
+                <h2 class="tel">(929)288-6640</h2>
+            </a>
+
+            <a href="mailto:rickdf7@gmail.com?subject=Olá&body=Would like more information?" target="_blank">
+                <img src="image/mail.png" alt="">
+                <h2 class="email">rickdf7@gmail.com</h2>
+            </a>
+
+            <a href="https://www.google.com/maps/search/?api=1&query=North+Bergen,+New+Jersey,+NJßßßß" target="_blank">
+                <img src="image/gps.png" alt="">
+                <h2 class="endereco">North Bergen - NJ</h2>
+            </a>
+            <p>© 2025 Henrique Aguiar, All rights reserved.</p>
+        </div><!-- container-contato -->
     </footer>
 
 </body>
