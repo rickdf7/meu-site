@@ -483,7 +483,7 @@ header {
     /* Transição suave */
 }
 
-.image-with-text:hover.text-overlay {
+.image-with-text:hover .text-overlay {
     opacity: 1;
     /* Mostra o texto ao passar o mouse */
 }
@@ -616,6 +616,7 @@ footer {
 }
 
 /* responsivo */
+/* modo retrato */
 /* Adicionando um ajuste específico para dispositivos menores */
 @media (max-width: 902px) {
 
@@ -739,3 +740,4 @@ footer {
     }
 
 }
+
